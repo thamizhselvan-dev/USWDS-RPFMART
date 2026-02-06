@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="en">
+{% include "head.html" %}
+  <body class="{{ page.body }}">
+    {% include "skipnav.html" %}
+    {% include "banner.html" %}
+    {% include "header--basic.html" %}
+    <main id="main-content">
+      <div class="grid-full-container usa-prose">
+        {% include "home.html" %}
+      </div>
+    </main>
+    {% include "footer.html" %}
+    {% include "identifier.html" %}
+    <script src="{{ 'assets/js/uswds.min.js' | url }}"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" defer></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/11.0.5/swiper-bundle.min.js" defer></script>
+
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+    const swiper = new Swiper('.swiper', {
+      loop: true,
+      pagination: {
+        el: '.swiper-pagination',
+      },
+      navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+      },
+      scrollbar: {
+        el: '.swiper-scrollbar',
+      },
+    });
+  });
+</script>
+
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const hero = document.querySelector("#hero");
+    const backToTop = document.querySelector("#backToTop");
+
+    if (!hero || !backToTop) return;
+
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (!entry.isIntersecting) {
+          backToTop.classList.add("is-visible");
+        } else {
+          backToTop.classList.remove("is-visible");
+        }
+      },
+      {
+        root: null,
+        threshold: 0
+      }
+    );
+
+    observer.observe(hero);
+  });
+</script>
+
+
+  </body>
+</html>

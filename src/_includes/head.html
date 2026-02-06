@@ -1,0 +1,14 @@
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="{{ page.excerpt | default: site.description | strip_html | truncate: 160 | escape }}">
+  <title>{% if page.title %}{{ page.title | escape }}{% else %}{{ site.title | escape }}{% endif %}</title>
+  <link rel="stylesheet" href="{{ "assets/css/styles.css" | url }}">
+  <link rel="canonical" href="{{ page.url | replace:'index.html','' | url }}">
+  <link rel="shortcut icon" type="image/ico" href="https://designsystem.digital.gov/assets/img/favicons/favicon.ico">
+  <link rel="icon" type="image/png" href="https://designsystem.digital.gov/assets/img/favicons/favicon.png">
+  <link rel="preload" href="{{ 'assets/js/uswds.min.js' | url }}" as="script">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/11.0.5/swiper-bundle.min.css" rel="stylesheet"/>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"/>
+</head>

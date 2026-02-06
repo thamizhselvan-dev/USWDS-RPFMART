@@ -1,0 +1,33 @@
+{
+  "name": "uswds-sandbox",
+  "private": true,
+  "author": "USWDS",
+  "license": "CC0-1.0",
+  "scripts": {
+    "build": "npx @11ty/eleventy",
+    "federalist": "npm run init && npm run build && npm run uswds:buildSass",
+    "init": "npm run uswds:buildDist && npm run uswds:copyAssets",
+    "serve": "npx @11ty/eleventy --serve",
+    "start": "concurrently \"npm run serve\" \"npm run watch\"",
+    "uswds:buildDist": "./build.sh",
+    "uswds:buildSass": "gulp buildSass",
+    "uswds:compileIcons": "gulp compileIcons",
+    "uswds:copyAssets": "gulp copyAssets",
+    "uswds:copyFonts": "gulp copyFonts",
+    "uswds:copyImages": "gulp copyImages",
+    "uswds:copyJS": "gulp copyJS",
+    "uswds:update": "npm update uswds && npm run uswds:buildDist",
+    "watch": "gulp watchSass",
+    "test": "snyk test"
+  },
+  "dependencies": {
+    "@uswds/uswds": "3.11.0",
+    "bootstrap": "^5.3.8"
+  },
+  "devDependencies": {
+    "@11ty/eleventy": "^3.0.0",
+    "@uswds/compile": "^1.2.1",
+    "concurrently": "^9.1.2",
+    "snyk": "^1.1295.3"
+  }
+}

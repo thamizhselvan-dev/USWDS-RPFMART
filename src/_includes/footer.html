@@ -1,0 +1,141 @@
+<footer class="usa-footer usa-footer--big">
+  <div class="grid-container usa-footer__return-to-top" id="backToTop">
+  <a href="#" aria-label="Back to top">
+    <img
+      src="https://icons.veryicon.com/png/o/miscellaneous/monochromatic-surface-icon-library/return-to-the-top-14.png"
+      alt="Back to top"
+    />
+  </a>
+</div>
+  <div class="usa-footer__primary-section">
+    <div class="grid-container">
+      <div class="grid-row grid-gap">
+        <div class="tablet:grid-col-8">
+          <nav class="usa-footer__nav" aria-label="Footer navigation">
+  <div class="grid-row grid-gap-4">
+    {% for item in nav.primary %}
+    <div class="mobile-lg:grid-col-6 desktop:grid-col-3">
+      <section class="usa-footer__primary-content usa-footer__primary-content--collapsible">
+
+        <button type="button" class="usa-footer__primary-link">
+          {{ item.name }}
+        </button>
+
+        <ul class="usa-list usa-list--unstyled">
+          {% if item.contents %}
+            {% for subsection in item.contents %}
+            <li class="usa-footer__secondary-link">
+              <a href="#">{{ subsection }}</a>
+            </li>
+            {% endfor %}
+          {% endif %}
+        </ul>
+
+      </section>
+    </div>
+    {% endfor %}
+  </div>
+</nav>
+
+        </div>
+        <div class="tablet:grid-col-4">
+          <div class="usa-sign-up">
+            <h3 class="usa-sign-up__heading">Sign up</h3>
+            <form class="usa-form">
+              <label class="usa-label" for="email" id=""
+                >Your email address</label
+              >
+              <input class="usa-input" id="email" name="email" type="email" />
+              <button class="usa-button" type="submit">Sign up</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="usa-footer__secondary-section">
+    <div class="grid-container">
+      <div class="grid-row grid-gap">
+        <div
+          class="usa-footer__logo grid-row mobile-lg:grid-col-6 mobile-lg:grid-gap-2"
+        >
+          <div class="mobile-lg:grid-col-auto">
+            <img
+              class="usa-footer__logo-img"
+              src="{{ 'https://www.uswebdesignsystem.org/uswds-1/images/RFPMart-logo.svg' |url }}"
+              alt=""
+            />
+          </div>
+          <div class="mobile-lg:grid-col-auto">
+            <p class="usa-footer__logo-heading">RPFMART</p>
+          </div>
+        </div>
+        <div class="usa-footer__contact-links mobile-lg:grid-col-6">
+          <div class="usa-footer__social-links grid-row grid-gap-1">
+            <div class="grid-col-auto">
+              <a class="usa-social-link" href="javascript:void(0);">
+                <img
+                  class="usa-social-link__icon"
+                  src="{{ 'assets/img/usa-icons/facebook.svg' |url }}"
+                  alt="Facebook"
+                />
+              </a>
+            </div>
+
+            <div class="grid-col-auto">
+              <a class="usa-social-link" href="javascript:void(0);">
+                <img
+                  class="usa-social-link__icon"
+                  src="{{ 'assets/img/usa-icons/twitter.svg' |url }}"
+                  alt="Twitter"
+                />
+              </a>
+            </div>
+
+            <div class="grid-col-auto">
+              <a class="usa-social-link" href="javascript:void(0);">
+                <img
+                  class="usa-social-link__icon"
+                  src="{{ 'assets/img/usa-icons/youtube.svg' |url }}"
+                  alt="YouTube"
+                />
+              </a>
+            </div>
+
+            <div class="grid-col-auto">
+              <a class="usa-social-link" href="javascript:void(0);">
+                <img
+                  class="usa-social-link__icon"
+                  src="{{ 'assets/img/usa-icons/instagram.svg' |url }}"
+                  alt="Instagram"
+                />
+              </a>
+            </div>
+
+            <div class="grid-col-auto">
+              <a class="usa-social-link" href="javascript:void(0);">
+                <img
+                  class="usa-social-link__icon"
+                  src="{{ 'assets/img/usa-icons/rss_feed.svg' |url }}"
+                  alt="RSS"
+                />
+              </a>
+            </div>
+          </div>
+          <address class="usa-footer__address">
+            <div class="usa-footer__contact-info grid-row grid-gap">
+              <div class="grid-col-auto">
+                <a href="tel:+1-315-627-3333">+1-315-627-3333</a>
+              </div>
+              <div class="grid-col-auto">
+                <a href="mailto:info@rpfmart.com">
+                  info@rpfmart.com
+                </a>
+              </div>
+            </div>
+          </address>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>

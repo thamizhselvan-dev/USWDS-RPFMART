@@ -22,6 +22,9 @@
         height: 4px;
         border-radius: 0;
     }
+    .swiper-pagination-bullet{
+        background: #ffffff; 
+    }
     .swiper-pagination-bullet-active{
         background: #ffffff;
     }
@@ -143,5 +146,10 @@
     }
     .usa-form .usa-button {
         margin-top: 1.5rem;
+    }
+    .swiper-slide{
+        .overlay{
+            background: #1212127a;
+        }
     }
 }
